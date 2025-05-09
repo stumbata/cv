@@ -1,5 +1,6 @@
 ---
 import Card from "../Card.astro";
+import { formatDate } from "@/utils";
 const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
 ---
 
@@ -8,9 +9,9 @@ const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: t
       <div class="project-title">{project.title}</div>
       <div class="job-time-location">
         <i class="far fa-calendar-alt"></i>
-        {project.start_date}
+        {formatDate(project.start_date)}
         -
-        {project.end_date}
+        {formatDate(project.end_date)}
 
         &nbsp;
         <i class="fa fa-map-marker-alt"></i>
