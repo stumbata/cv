@@ -1,0 +1,19 @@
+---
+import Card from "../Card.astro";
+const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+--- 
+
+<Card title="TECHNOLOGIES">
+    {my_info.technologies.map((technology: any) => (
+      <div class="secondary-color technology-title">{technology.name}</div>
+
+      <div>
+        {technology.skills.map((skill: any) => (
+          <div class="skill-box">{skill}</div>
+        ))}
+      </div>
+
+      
+      <hr class="dashed-line" />
+    ))}
+</Card>

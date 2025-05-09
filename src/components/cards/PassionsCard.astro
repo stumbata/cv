@@ -1,0 +1,15 @@
+---
+import Card from "../Card.astro";
+const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+---
+
+<Card title="PASSIONS">
+    {my_info.passions.map((passion: any) => (
+      <div>
+        <i class="fa fa-heart fa-lg passion-icon"></i>
+        &nbsp;
+        <span class="font-weight-bold normal-text">{passion}</span>
+      </div>
+      <hr class="dashed-line" />
+    ))}
+</Card>

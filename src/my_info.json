@@ -1,0 +1,214 @@
+{
+  "firstname": "Stanislav",
+  "lastname": "Ognyanov",
+  "email": "stanislav.ognqnov@gmail.com",
+  "phone": "+359 899 266 088",
+  "birthday": "1985-06-28",
+  "living_city": "Varna",
+  "cv_motto": "Good to have in your team",
+  "job_history": [
+    {
+      "company": "Astound Commerce Bulgaria",
+      "location": "Varna",
+      "company_site": "https://astoundcommerce.com/",
+      "job_title": "Salesforce Commerce Cloud Developer",
+      "start_date": "2017-12-05",
+      "end_date": "present",
+      "company_description": "Experts in Global eCommerce Solutions",
+      "responsibilities": [
+        "Building, maintaining, upgrading eCommerce sites with SFCC"
+      ]
+    },
+    {
+      "company": "Enetpulse",
+      "location": "Sofia",
+      "company_site": "https://www.enetpulse.com/",
+      "job_title": "Senior PHP Developer",
+      "start_date": "2014-04-01",
+      "end_date": "2017-03-31",
+      "company_description": "Enetpulse is a company which collect and sell sports data.",
+      "responsibilities": [
+        "Leading developer in a team which create sport widgets like live score and standings, which are implemented in client sites.",
+        "Training new people",
+        "Responsible for framework changes"
+      ]
+    },
+    {
+      "company": "Freedcamp",
+      "location": "Shumen",
+      "company_site": "https://freedcamp.com/",
+      "job_title": "Software Engineer",
+      "start_date": "2012-12-01",
+      "end_date": "2014-02-01",
+      "company_description": "One of the top web based project management systems",
+      "responsibilities": ["I was lead backend and also javascript developer."]
+    },
+    {
+      "company": "IT Partner",
+      "location": "Shumen",
+      "company_site": "http://it-partner.bg/",
+      "job_title": "Software Engineer",
+      "start_date": "2012-01-01",
+      "end_date": "2012-10-01",
+      "company_description": "Build ERP systems, web applications and mobile applications",
+      "responsibilities": [
+        "I was a team lead for a web based system (mytelepol.com)"
+      ]
+    },
+    {
+      "company": "Freedcamp",
+      "location": "Shumen",
+      "company_site": "https://freedcamp.com/",
+      "job_title": "Software Engineer",
+      "start_date": "2011-01-01",
+      "end_date": "2011-12-01",
+      "company_description": "One of the top web based project management systems",
+      "responsibilities": ["I was lead backend and also javascript developer."]
+    },
+    {
+      "company": "42 Soft",
+      "location": "Plovdiv",
+      "company_site": "",
+      "job_title": "Web programmer",
+      "start_date": "2010-06-01",
+      "end_date": "2010-11-01",
+      "company_description": "Startup for web based game",
+      "responsibilities": ["Building the world map of the game"]
+    },
+    {
+      "company": "VLG",
+      "location": "Plovdiv",
+      "company_site": "",
+      "job_title": "PHP Programmer",
+      "start_date": "2009-09-01",
+      "end_date": "2010-03-01",
+      "company_description": "Web applications",
+      "responsibilities": ["Developing site with videos like youtube"]
+    },
+    {
+      "company": "Telepol Net",
+      "location": "Shumen",
+      "company_site": "",
+      "job_title": "Team Lead",
+      "start_date": "2007-07-01",
+      "end_date": "2009-02-01",
+      "company_description": "Build ERP systems, web applications and mobile applications",
+      "responsibilities": ["Team lead of ERP system for security companye"]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Captain of University programming team",
+      "description": "Number 1 in University programming contest"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level_text": "Proficient",
+      "level_points": 4,
+      "level_max_points": 5
+    }
+  ],
+  "projects": [
+    {
+      "title": "www.birkenstock.com",
+      "start_date": "2022-10-01",
+      "end_date": "present",
+      "location": "Varna",
+      "my_role": "Salesforce Commerce Cloud developer",
+      "results": [
+        "Working on backend and frontend javascript, implementing 3th party services(constructor.io, Dynamic Yield and etc.)"
+      ]
+    },
+    {
+      "title": "enetscores.com",
+      "start_date": "2016-06-01",
+      "end_date": "2017-03-31",
+      "location": "Sofia",
+      "my_role": "backend developer",
+      "results": [
+        "Complete sites and custom widgets with sports data, which are sold to clients."
+      ]
+    },
+    {
+      "title": "freedcamp.com",
+      "start_date": "2012-12-01",
+      "end_date": "2014-02-01",
+      "location": "Shumen",
+      "my_role": "full stack programmer",
+      "results": [
+        "Freedcamp became one of the top 10 project management systems."
+      ]
+    }
+  ],
+  "personal_projects": [
+    {
+      "site": "https://batka.vercel.app",
+      "tech": "Next.js, postgreSQL",
+      "info": "Database with fitness exercises"
+    },
+    {
+      "site": "https://bace-writings.vercel.app",
+      "tech": "Nuxt.js",
+      "info": "My short stories"
+    },
+    {
+      "site": "https://fitness-calc-react.vercel.app",
+      "tech": "React",
+      "info": "Fitness calculator"
+    },
+    {
+      "site": "https://play.google.com/store/apps/developer?id=Stanislav+Ognyanov",
+      "tech": "Kotlin",
+      "info": "2 Android apps"
+    }
+  ],
+  "courses": [
+    "Android with Kotlin",
+    "AWS - Certified Solutions Architect",
+    "The Complete Docker Course for DevOps and Developers"
+  ],
+  "passions": ["bachata dancing, travel"],
+  "summary": "About 10 years of web programming with PHP and MySQL, then switched to only javascript for backend and frontend. Participate and win sport programming(algorithms) contests as a student, that helps me to write clean and efficient code which can be easily maintain by others. As a team lead always finish projects on time. Always enthusiastic to learn and implement new technologies.",
+  "technologies": [
+    {
+      "name": "Backend",
+      "skills": [
+        "Node",
+        "Next",
+        "Nuxt",
+        "Demandware Script",
+        "MYSQL",
+        "PHP",
+        "Laravel"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "skills": [
+        "Typescript",
+        "React",
+        "Tailwind CSS",
+        "Vuejs",
+        "jQuery",
+        "Bootstrap"
+      ]
+    },
+    {
+      "name": "Tools",
+      "skills": ["VSCode", "Mac", "Vite", "Vercel", "AWS", "Git", "Vagrant"]
+    }
+  ],
+  "education": [
+    {
+      "school_name": "Shumen University",
+      "start_date": "2004-09-01",
+      "end_date": "2007-06-01",
+      "speciality": "Informatics",
+      "degree": "Bechalor",
+      "grade": 5.5,
+      "grade_max": "6.00"
+    }
+  ]
+}

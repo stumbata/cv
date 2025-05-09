@@ -1,0 +1,29 @@
+---
+import Card from "../Card.astro";
+const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+---
+
+<Card title="PROJECTS">
+    {my_info.projects.map((project: any) => (
+      <div class="project-title">{project.title}</div>
+      <div class="job-time-location">
+        <i class="far fa-calendar-alt"></i>
+        {project.start_date}
+        -
+        {project.end_date}
+
+        &nbsp;
+        <i class="fa fa-map-marker-alt"></i>
+        {project.location}
+      </div>
+
+      <div class="normal-text">{project.my_role}</div>
+      <ul class="responsibility-list">
+        {project.results.map((project_result: any) => (
+          <li>{project_result}</li>
+        ))}
+      </ul>
+
+      <hr class="dashed-line" />
+    ))}
+</Card>

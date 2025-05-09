@@ -1,0 +1,38 @@
+---
+const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+const fullname = `${my_info.firstname} ${my_info.lastname}`;
+---
+
+  <header>
+    <div class="header-top">
+      <h1 class="cv-title">{ fullname }</h1>
+
+      <div class="cv-subtitle">{my_info.cv_motto }</div>
+    </div>
+
+    <div class="main-info">
+      <div class="main-info-cell">
+        <i aria-hidden="true" class="fa fa-phone"></i>
+        <span class="main-info-text">{ my_info.phone }</span>
+      </div>
+
+      <div class="main-info-cell">
+        <i aria-hidden="true" class="fa fa-at"></i>
+        <span class="main-info-text">{ my_info.email }</span>
+      </div>
+
+      <div class="main-info-cell">
+        <i aria-hidden="true" class="fa fa-map-marker-alt"></i>
+        <span class="main-info-text">{ my_info.living_city }</span>
+      </div>
+
+      <div class="main-info-cell">
+        <i aria-hidden="true" class="fa fa-birthday-cake"></i>
+        <span class="main-info-text">40</span>
+      </div>
+    </div>
+
+    <div class="pic-container">
+      <img class="my-pic" src="/me.jpg" alt="my pic" />
+    </div>
+  </header>

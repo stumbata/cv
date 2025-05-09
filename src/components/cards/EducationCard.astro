@@ -1,0 +1,35 @@
+---
+import Card from "../Card.astro";
+const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+---
+
+<Card title="EDUCATION">
+    {my_info.education.map((education_row: any) => (
+      <div
+        class="grid-education align-items-center"
+      :key="key"
+      v-for="(education_row, key) in my_info.education"
+    >
+      <div class="col">
+        <div>{education_row.degree}, {education_row.speciality}</div>
+
+        <div class="course-title">{education_row.school_name}</div>
+        <div class="job-time-location">
+          <i class="far fa-calendar-alt"></i>
+          {new Date(education_row.start_date).getFullYear()}
+          -
+          {new Date(education_row.end_date).getFullYear()}
+        </div>
+      </div>
+
+      <div class="text-center gpa-col">
+        <div class="normal-text">GPA</div>
+
+        <div>
+          <span class="sec-color">{education_row.grade}</span> /
+          {education_row.grade_max}
+        </div>
+      </div>
+    </div>
+  ))}
+</Card>

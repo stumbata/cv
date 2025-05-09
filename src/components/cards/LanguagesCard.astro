@@ -1,0 +1,41 @@
+---
+import Card from "../Card.astro";
+const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+---
+
+<Card title="LANGUAGES">
+    {my_info.languages.map((language: any) => (
+      <div class="grid-languages">
+        <div>
+          <div class="language-name">{language.name}</div>
+          <div class="normal-text">{language.level_text}</div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="language-dot"
+                v-bind:class="{ 'language-plus': language.level_points >= 1 }"
+              ></div>
+              <div
+                class="language-dot"
+                v-bind:class="{ 'language-plus': language.level_points >= 2 }"
+              ></div>
+              <div
+                class="language-dot"
+                v-bind:class="{ 'language-plus': language.level_points >= 3 }"
+              ></div>
+              <div
+                class="language-dot"
+                v-bind:class="{ 'language-plus': language.level_points >= 4 }"
+              ></div>
+              <div
+                class="language-dot"
+                v-bind:class="{ 'language-plus': language.level_points >= 5 }"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+</Card>

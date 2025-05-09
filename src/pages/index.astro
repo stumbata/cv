@@ -1,5 +1,15 @@
 ---
-
+import '../style/global.scss';
+import Header from '../components/Header.astro';
+import ExperienceCard from '../components/cards/ExperienceCard.astro';
+import EducationCard from '../components/cards/EducationCard.astro';
+import SummaryCard from '../components/cards/SummaryCard.astro';
+import TechnologiesCard from '../components/cards/TechnologiesCard.astro';
+import LanguagesCard from '../components/cards/LanguagesCard.astro';
+import AchievementsCard from '../components/cards/AchievementsCard.astro';
+import ProjectsCard from '../components/cards/ProjectsCard.astro';
+import PersonalProjectsCard from '../components/cards/PersonalProjectsCard.astro';
+import PassionsCard from '../components/cards/PassionsCard.astro';
 ---
 
 <html lang="en">
@@ -11,6 +21,29 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+  <div class="main-container">
+    <Header />
+
+    <div class="content">
+      <div class="first-column">
+        <ExperienceCard />
+		<EducationCard />
+		<SummaryCard />
+      </div>
+
+		<div class="second-column">
+        <TechnologiesCard />
+        <LanguagesCard />
+        <AchievementsCard />
+        <ProjectsCard />
+        <PersonalProjectsCard />
+        <PassionsCard />
+      </div>
+      <!-- end of second column -->
+
+
+      <!-- end of second column -->
+    </div>
+    <!-- end of content -->
 	</body>
 </html>
