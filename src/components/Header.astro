@@ -1,6 +1,7 @@
 ---
 const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
 const fullname = `${my_info.firstname} ${my_info.lastname}`;
+const dateYearAndMonth = new Date(my_info.birthday).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 ---
 
   <header>
@@ -28,7 +29,7 @@ const fullname = `${my_info.firstname} ${my_info.lastname}`;
 
       <div class="main-info-cell">
         <i aria-hidden="true" class="fa fa-birthday-cake"></i>
-        <span class="main-info-text">40</span>
+        <span class="main-info-text">{ dateYearAndMonth }</span>
       </div>
     </div>
 
