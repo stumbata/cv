@@ -1,0 +1,313 @@
+@import './normilize.css';
+@import './fontawesome-all.css';
+
+:root {
+    --primary-color: #212529;
+    --secondary-color: #2563eb;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--primary-color);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.sec-color {
+    color: var(--secondary-color);
+}
+
+.main-container {
+    max-width: 835px;
+    margin: auto;
+    padding: 25px;
+}
+
+.main-container header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+        'header-top my-pic'
+        'header-bottom my-pic';
+}
+
+@media (max-width: 400px) {
+    .main-container header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'header-top'
+            'my-pic'
+            'header-bottom';
+        grid-gap: 10px;
+    }
+}
+
+.main-container header .cv-title {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.main-container header .cv-subtitle {
+    color: var(--secondary-color);
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.17em;
+    line-height: 1.2;
+}
+
+.main-container header .pic-container {
+    grid-area: my-pic;
+    margin-right: 0;
+}
+
+.main-container header .header-top {
+    grid-area: header-top;
+}
+
+.main-container header .my-pic {
+    display: block;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.main-container header .main-info {
+    grid-area: header-bottom;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.main-container header .main-info-cell {
+    padding: 2px;
+}
+
+.main-container header .main-info-cell .fa {
+    color: var(--secondary-color);
+    margin-right: 4px;
+}
+
+.main-container .content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 1rem;
+    grid-template-areas: 'first-column second-column';
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    .main-container .content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'first-column'
+            'second-column';
+    }
+}
+
+.main-container .content .first-column {
+    grid-area: first-column;
+}
+
+.main-container .content .second-column {
+    grid-area: second-column;
+}
+
+.main-container .content .cv-section {
+    margin-bottom: 2rem;
+}
+
+.main-container .content .grid-languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    align-items: center;
+}
+
+.main-container .content .grid-education {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+
+.main-container .content hr.section-underline {
+    margin: 0 0 13px 0;
+    border-top: 2px solid black;
+}
+
+.main-container .content .section-title {
+    margin-bottom: 0.1rem;
+    font-weight: bold;
+}
+
+.main-container .content .job-title {
+    font-size: 1.4rem;
+}
+
+.main-container .content .company-name {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.9375rem;
+}
+
+.main-container .content .company-description {
+    font-size: 0.875rem;
+}
+
+.main-container .content .dashed-line {
+    border-top-style: dashed;
+}
+
+.main-container .content .responsibility-list {
+    font-size: 0.875rem;
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.main-container .content ul li:before {
+    content: '\2022\00a0';
+    color: #777;
+}
+
+.main-container .content .res-spandsa {
+    margin-left: -0.5rem;
+}
+
+.main-container .content .job-time-location {
+    font-size: 0.75rem;
+    margin: 0px 0px 5px 0px;
+}
+
+.main-container .content .fa-diamond {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.main-container .content .normal-text {
+    font-size: 0.875rem;
+}
+
+.main-container .content .language-dot {
+    background-color: #000;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.main-container .content .language-name {
+    font-weight: bold;
+}
+
+.main-container .content .language-dot.language-plus {
+    background-color: var(--secondary-color);
+}
+
+.main-container .content .course-title {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.main-container .content .section-underline.extra-bottom-margin {
+    margin-bottom: 1.2rem;
+}
+
+.main-container .content .passion-icon {
+    color: var(--secondary-color);
+}
+
+.main-container .content .skill-box {
+    border: 1px solid #999;
+    padding: 0.3rem;
+    display: inline-block;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.main-container .content .technology-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.main-container .content .gpa-col {
+    border-left: 1px solid #777;
+}
+
+.main-container .content .credits-block {
+    text-align: right;
+    font-size: 0.85rem;
+    padding-bottom: 10px;
+    line-height: 1.2;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.main-container .content .achievements-grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.main-container .content .project-site {
+    margin-bottom: 0.2rem;
+}
+
+.main-container .content .project-link {
+    color: var(--secondary-color);
+}
+
+.main-container .content .personal-project-info {
+    font-size: 0.85rem;
+    display: flex;
+}
+
+.main-container .content .personal-project-info-title {
+    font-weight: 600;
+    width: 6rem;
+}
+
+.main-container .content .project-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-weight: 500;
+    line-height: 1.2;
+}
