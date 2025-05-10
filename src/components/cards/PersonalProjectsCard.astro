@@ -1,10 +1,11 @@
 ---
 import Card from "../Card.astro";
-const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+import { getCollection } from "astro:content";
+const my_info = (await getCollection('myInfo'))[0].data;
 ---
 
   <Card title="PERSONAL PROJECTS">
-    {my_info.personal_projects.map((project: any) => (
+    {my_info.personal_projects.map((project) => (
       <div class="project-site">
         <a target="_blank" class="project-link" href={project.site}>{project.site}</a>
       </div>

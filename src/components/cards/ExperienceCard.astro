@@ -1,11 +1,12 @@
 ---
 import Card from "../Card.astro";
 import { formatDate } from "@/utils";
-const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+import { getCollection } from "astro:content";
+const my_info = (await getCollection('myInfo'))[0].data;
 ---
 
 <Card title="EXPERIENCE">
-    {my_info.job_history.map((job_info: any) => (
+    {my_info.job_history.map((job_info) => (
       <div class="job-title">{job_info.job_title}</div>
       <div class="company-name">{job_info.company}</div>
 
@@ -22,7 +23,7 @@ const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: t
       <div class="company-description">{job_info.company_description}</div>
 
       <ul class="responsibility-list">
-        {job_info.responsibilities.map((responsibility: any) => (
+        {job_info.responsibilities.map((responsibility) => (
           <li>{responsibility}</li>
         ))}
       </ul>

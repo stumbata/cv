@@ -1,7 +1,9 @@
 ---
-const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+import { getCollection } from "astro:content";
+const my_info = (await getCollection('myInfo'))[0].data;
 const fullname = `${my_info.firstname} ${my_info.lastname}`;
 const dateYearAndMonth = new Date(my_info.birthday).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+
 ---
 
   <header>

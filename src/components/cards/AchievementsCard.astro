@@ -1,11 +1,12 @@
 ---
 import Card from "../Card.astro";
-const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+import { getCollection } from "astro:content";
+const my_info = (await getCollection('myInfo'))[0].data;
 ---
 
 <Card title="ACHIEVEMENTS">
   <div class="achievements-grid">
-    {my_info.achievements.map((achievement: any) => (
+    {my_info.achievements.map((achievement) => (
       <div><i class="far fa-gem fa-lg sec-color"></i></div>
       <div>
         <div style="font-weight: bold">{achievement.title}</div>

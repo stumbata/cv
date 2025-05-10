@@ -1,15 +1,14 @@
 ---
 import Card from "../Card.astro";
-const my_info: any = Object.values(import.meta.glob('@/my_info.json', { eager: true }))[0];
+import { getCollection } from "astro:content";
+const my_info = (await getCollection('myInfo'))[0].data;
 ---
 
 <Card title="EDUCATION">
-    {my_info.education.map((education_row: any) => (
+    {my_info.education.map((education_row) => (
       <div
         class="grid-education align-items-center"
-      :key="key"
-      v-for="(education_row, key) in my_info.education"
-    >
+      >
       <div class="col">
         <div>{education_row.degree}, {education_row.speciality}</div>
 
