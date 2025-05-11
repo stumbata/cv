@@ -1,6 +1,7 @@
 ---
 import Card from "../Card.astro";
 import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
 const my_info = (await getCollection('myInfo'))[0].data;
 ---
 
@@ -14,7 +15,7 @@ const my_info = (await getCollection('myInfo'))[0].data;
 
         <div class="course-title">{education_row.school_name}</div>
         <div class="job-time-location">
-          <i class="far fa-calendar-alt"></i>
+          <Icon name="mdi:calendar-month" size="15" style="margin-right: 2px;" />
           {new Date(education_row.start_date).getFullYear()}
           -
           {new Date(education_row.end_date).getFullYear()}

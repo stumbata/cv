@@ -1,14 +1,14 @@
 ---
 import Card from "../Card.astro";
+import CustomIcon from "../CustomIcon.astro";
 import { getCollection } from "astro:content";
 const my_info = (await getCollection('myInfo'))[0].data;
 ---
 
 <Card title="PASSIONS">
     {my_info.passions.map((passion) => (
-      <div>
-        <i class="fa fa-heart fa-lg passion-icon"></i>
-        &nbsp;
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <CustomIcon name="mdi:heart" size="26" />
         <span class="font-weight-bold normal-text">{passion}</span>
       </div>
       <hr class="dashed-line" />

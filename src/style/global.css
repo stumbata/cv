@@ -1,5 +1,4 @@
 @import './normilize.css';
-@import './fontawesome-all.css';
 
 :root {
     --primary-color: #212529;
@@ -116,12 +115,9 @@ hr {
 }
 
 .main-container header .main-info-cell {
-    padding: 2px;
-}
-
-.main-container header .main-info-cell .fa {
-    color: var(--secondary-color);
-    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
 }
 
 .main-container .content {
@@ -210,12 +206,9 @@ hr {
 
 .main-container .content .job-time-location {
     font-size: 0.75rem;
-    margin: 0px 0px 5px 0px;
-}
-
-.main-container .content .fa-diamond {
-    color: var(--secondary-color);
-    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .main-container .content .normal-text {

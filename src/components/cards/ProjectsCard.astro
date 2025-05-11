@@ -1,6 +1,7 @@
 ---
 import Card from "../Card.astro";
 import { formatDate } from "@/utils";
+import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 const my_info = (await getCollection('myInfo'))[0].data;
 ---
@@ -9,13 +10,12 @@ const my_info = (await getCollection('myInfo'))[0].data;
     {my_info.projects.map((project) => (
       <div class="project-title">{project.title}</div>
       <div class="job-time-location">
-        <i class="far fa-calendar-alt"></i>
+        <Icon name="mdi:calendar-month" size="15" style="margin-right: 2px;" /> 
         {formatDate(project.start_date)}
         -
         {formatDate(project.end_date)}
 
-        &nbsp;
-        <i class="fa fa-map-marker-alt"></i>
+        <Icon name="mdi:map-marker" size="15" style="margin-left: 15px;" />
         {project.location}
       </div>
 

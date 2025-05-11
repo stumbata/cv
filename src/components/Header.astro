@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import CustomIcon from "./CustomIcon.astro";
 const my_info = (await getCollection('myInfo'))[0].data;
 const fullname = `${my_info.firstname} ${my_info.lastname}`;
 const dateYearAndMonth = new Date(my_info.birthday).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
@@ -15,22 +16,22 @@ const dateYearAndMonth = new Date(my_info.birthday).toLocaleDateString('en-US', 
 
     <div class="main-info">
       <div class="main-info-cell">
-        <i aria-hidden="true" class="fa fa-phone"></i>
+        <CustomIcon name="mdi:cellphone" />
         <span class="main-info-text">{ my_info.phone }</span>
       </div>
 
       <div class="main-info-cell">
-        <i aria-hidden="true" class="fa fa-at"></i>
+        <CustomIcon name="mdi:email" />
         <span class="main-info-text">{ my_info.email }</span>
       </div>
 
       <div class="main-info-cell">
-        <i aria-hidden="true" class="fa fa-map-marker-alt"></i>
+        <CustomIcon name="mdi:map-marker" />
         <span class="main-info-text">{ my_info.living_city }</span>
       </div>
 
       <div class="main-info-cell">
-        <i aria-hidden="true" class="fa fa-birthday-cake"></i>
+        <CustomIcon name="mdi:cake" />
         <span class="main-info-text">{ dateYearAndMonth }</span>
       </div>
     </div>

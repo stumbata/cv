@@ -1,0 +1,9 @@
+---
+import { Icon } from "astro-icon/components";
+const { name, size = 16, style = '' } = Astro.props;
+const otherProps = Object.fromEntries(
+  Object.entries(Astro.props).filter(([key]) => key !== 'name' && key !== 'size' && key !== 'style')
+);
+---
+
+<Icon name={name} size={size} style={` color:var(--secondary-color); ${style}`} {...otherProps}/>
