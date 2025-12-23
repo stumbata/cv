@@ -1,7 +1,7 @@
 ---
 import Card from "../Card.astro";
-import { getCollection } from "astro:content";
-const my_info = (await getCollection('myInfo'))[0].data;
+import { getMyInfo } from "@/utils";
+const my_info = await getMyInfo();
 ---
 
 <Card title="LANGUAGES">

@@ -1,8 +1,8 @@
 ---
 import Card from "../Card.astro";
-import { getCollection } from "astro:content";
+import { getMyInfo } from "@/utils";
 import { Icon } from "astro-icon/components";
-const my_info = (await getCollection('myInfo'))[0].data;
+const my_info = await getMyInfo();
 ---
 
 <Card title="EDUCATION">

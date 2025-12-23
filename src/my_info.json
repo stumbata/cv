@@ -1,4 +1,5 @@
-{
+[{
+    "id": "stan",
     "firstname": "Stanislav",
     "lastname": "Ognyanov",
     "email": "stanislav.ognqnov@gmail.com",
@@ -9,7 +10,7 @@
     "job_history": [
         {
             "company": "Astound Commerce Bulgaria",
-            "location": "Varna",
+            "location": "Varna / Remote (Plovdiv)",
             "company_site": "https://astoundcommerce.com/",
             "job_title": "Salesforce Commerce Cloud Developer",
             "start_date": "2017-12-05",
@@ -33,7 +34,7 @@
         },
         {
             "company": "Freedcamp",
-            "location": "Shumen",
+            "location": "Remote",
             "company_site": "https://freedcamp.com/",
             "job_title": "Software Engineer",
             "start_date": "2012-12-01",
@@ -53,7 +54,7 @@
         },
         {
             "company": "Freedcamp",
-            "location": "Shumen",
+            "location": "Remote",
             "company_site": "https://freedcamp.com/",
             "job_title": "Software Engineer",
             "start_date": "2011-01-01",
@@ -149,11 +150,6 @@
             "site": "https://fitness-calc-react.vercel.app",
             "tech": "React",
             "info": "Fitness calculator"
-        },
-        {
-            "site": "https://play.google.com/store/apps/developer?id=Stanislav+Ognyanov",
-            "tech": "Kotlin",
-            "info": "2 Android apps"
         }
     ],
     "courses": [
@@ -188,4 +184,4 @@
             "grade_max": "6.00"
         }
     ]
-}
+}]

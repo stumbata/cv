@@ -5,13 +5,7 @@ import { defineCollection, z } from 'astro:content';
 import { file } from 'astro/loaders';
 
 const myInfo = defineCollection({
-    loader: file('src/my_info.json', {
-        parser: (text) => {
-            let myInfo = JSON.parse(text);
-            myInfo.id = '1';
-            return [myInfo];
-        },
-    }),
+    loader: file('src/my_info.json'),
     schema: z.object({
         firstname: z.string(),
         lastname: z.string(),

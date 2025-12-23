@@ -1,9 +1,9 @@
 ---
 import Card from "../Card.astro";
-import { formatDate } from "@/utils";
+import { formatDate, getMyInfo } from "@/utils";
 import { Icon } from "astro-icon/components";
-import { getCollection } from "astro:content";
-const my_info = (await getCollection('myInfo'))[0].data;
+
+const my_info = await getMyInfo();
 ---
 
 <Card title="PROJECTS">
