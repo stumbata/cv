@@ -23,29 +23,25 @@ import PassionsCard from '../components/cards/PassionsCard.astro';
     <meta name="keywords" content="Stanislav Ognyanov, CV, Stanislav Ognyanov CV" />
 	</head>
 	<body>
-  <div class="main-container">
-    <Header />
+    <main class="main-container">
+      <Header />
 
-    <div class="content">
-      <div class="first-column">
-        <ExperienceCard />
-		<EducationCard />
-		<SummaryCard />
+      <div class="content">
+        <div class="first-column">
+          <ExperienceCard />
+          <EducationCard />
+          <SummaryCard />
+        </div>
+
+        <div class="second-column">
+          <TechnologiesCard />
+          <LanguagesCard />
+          <AchievementsCard />
+          <ProjectsCard />
+          <PersonalProjectsCard />
+          <PassionsCard />
+        </div>
       </div>
-
-		<div class="second-column">
-        <TechnologiesCard />
-        <LanguagesCard />
-        <AchievementsCard />
-        <ProjectsCard />
-        <PersonalProjectsCard />
-        <PassionsCard />
-      </div>
-      <!-- end of second column -->
-
-
-      <!-- end of second column -->
-    </div>
-    <!-- end of content -->
+    </main>
 	</body>
 </html>
