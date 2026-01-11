@@ -115,6 +115,10 @@ a {
             font-weight: 500;
             font-size: 1.17em;
             line-height: 1.2;
+
+            @media (max-width: 500px) {
+                margin: 0.5rem 0;
+            }
         }
 
         .pic-container {
