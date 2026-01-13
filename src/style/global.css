@@ -284,13 +284,18 @@ a {
             font-size: 0.875rem;
         }
 
+        .language-dots-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
         .language-dot {
             width: 1.2rem;
             height: 1.2rem;
             border-radius: 50%;
-            display: inline-block;
-            margin-left: 0.5rem;
-            vertical-align: middle;
+            flex-shrink: 0;
             background-color: var(--divider-dark);
             transition: transform var(--transition-fast);
 

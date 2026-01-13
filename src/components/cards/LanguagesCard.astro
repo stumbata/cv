@@ -11,9 +11,7 @@ const my_info = await getMyInfo();
           <div class="language-name">{language.name}</div>
           <div class="normal-text">{language.level_text}</div>
         </div>
-        <div>
-          <div>
-            <div>
+        <div class="language-dots-container">
               <div
                 class={`language-dot ${language.level_points >= 1 ? 'language-plus' : ''}`}
               ></div>
@@ -29,8 +27,6 @@ const my_info = await getMyInfo();
               <div
                 class={`language-dot ${language.level_points >= 5 ? 'language-plus' : ''}`}
               ></div>
-            </div>
-          </div>
         </div>
       </div>
     ))}
