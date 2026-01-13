@@ -148,12 +148,12 @@
                 "info": "Database with fitness exercises"
             },
             {
-                "site": "https://bace-writings.vercel.app",
-                "tech": "Nuxt.js",
+                "site": "https://writings.stumbata.com",
+                "tech": "Astro",
                 "info": "My short stories"
             },
             {
-                "site": "https://fitness-calc-react.vercel.app",
+                "site": "https://calc.stumbata.com",
                 "tech": "React",
                 "info": "Fitness calculator"
             }
